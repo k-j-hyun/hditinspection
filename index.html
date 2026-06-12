@@ -141,6 +141,10 @@ body{padding-bottom:72px;}
 .uc-card.school .uc-dot{background:#16a85f;}
 .uc-li strong{color:#0a0a0a;font-weight:800;}
 .uc-li.size{background:#F8F9FF;border-radius:8px;padding:10px 11px;border-bottom:none;margin-top:5px;}
+/* REFRESH BUTTON */
+.refresh-btn{display:inline-flex;align-items:center;gap:7px;margin-top:20px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.2);color:#9aa0a8;font-size:11px;font-weight:700;padding:10px 18px;border-radius:50px;cursor:pointer;font-family:inherit;transition:all .15s;}
+.refresh-btn:active{background:rgba(255,255,255,0.16);color:#fff;}
+.refresh-btn .rf-ico{font-size:13px;line-height:1;}
 </style>
 </head>
 <body>
@@ -550,6 +554,7 @@ body{padding-bottom:72px;}
     <a href="mailto:kjhyun@hyundaiit.com" class="fbtn email">이메일</a>
   </div>
   <div class="copy">© 현대아이티주식회사 · hyundaiit.com</div>
+  <button id="refreshBtn" class="refresh-btn" type="button"><span class="rf-ico">&#8635;</span> 최신 내용으로 새로고침 (캐시 삭제)</button>
 </footer>
 
 <div class="sticky-cta">
@@ -579,6 +584,23 @@ body{padding-bottom:72px;}
       document.getElementById("tab-" + target).classList.add("active");
     });
   });
+  // 새로고침(캐시 삭제) 버튼
+  var rb = document.getElementById("refreshBtn");
+  if(rb){
+    rb.addEventListener("click", function(){
+      var bust = function(){ location.replace(location.pathname + "?v=" + Date.now()); };
+      var tasks = [];
+      try{
+        if(window.caches && caches.keys){
+          tasks.push(caches.keys().then(function(ks){ return Promise.all(ks.map(function(k){ return caches.delete(k); })); }));
+        }
+        if(navigator.serviceWorker && navigator.serviceWorker.getRegistrations){
+          tasks.push(navigator.serviceWorker.getRegistrations().then(function(rs){ return Promise.all(rs.map(function(r){ return r.unregister(); })); }));
+        }
+      }catch(e){}
+      if(tasks.length){ Promise.all(tasks).then(bust).catch(bust); } else { bust(); }
+    });
+  }
 })();
 </script>
 </body>
