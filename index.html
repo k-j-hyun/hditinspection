@@ -123,6 +123,24 @@ body{padding-bottom:72px;}
 .sticky-cta a{flex:1;text-align:center;padding:13px 6px;border-radius:11px;font-size:13.5px;font-weight:800;text-decoration:none;}
 .sticky-cta .s-call{flex:1.5;background:linear-gradient(135deg,#FFE14D 0%,#FFD600 100%);color:#0a0a0a;}
 .sticky-cta .s-blog{background:#03C75A;color:#fff;}
+/* USE-CASE CARDS */
+.usecase{display:flex;flex-direction:column;gap:14px;}
+.uc-card{border-radius:14px;overflow:hidden;border:1.5px solid #E6EAF1;box-shadow:0 4px 16px rgba(0,0,0,0.05);}
+.uc-head{padding:15px 18px;color:#fff;display:flex;align-items:center;justify-content:space-between;gap:10px;}
+.uc-card.edu .uc-head{background:linear-gradient(135deg,#0047AB 0%,#0a5bd6 100%);}
+.uc-card.biz .uc-head{background:linear-gradient(135deg,#13294B 0%,#2b4a6f 100%);}
+.uc-card.school .uc-head{background:linear-gradient(135deg,#0e8a4f 0%,#16a85f 100%);}
+.uc-tag{font-size:10.5px;font-weight:800;letter-spacing:1.5px;opacity:0.92;}
+.uc-model{font-size:16px;font-weight:900;margin-top:3px;}
+.uc-pill{background:rgba(255,255,255,0.18);border:1px solid rgba(255,255,255,0.32);border-radius:20px;padding:5px 12px;font-size:10.5px;font-weight:800;white-space:nowrap;}
+.uc-body{padding:13px 18px 15px;background:#fff;}
+.uc-li{display:flex;gap:10px;align-items:flex-start;padding:7px 0;font-size:12.5px;color:#4a4a4a;line-height:1.55;border-bottom:1px solid #F2F4F8;}
+.uc-li:last-child{border-bottom:none;}
+.uc-dot{flex-shrink:0;width:6px;height:6px;border-radius:50%;background:#0047AB;margin-top:6px;}
+.uc-card.biz .uc-dot{background:#2b4a6f;}
+.uc-card.school .uc-dot{background:#16a85f;}
+.uc-li strong{color:#0a0a0a;font-weight:800;}
+.uc-li.size{background:#F8F9FF;border-radius:8px;padding:10px 11px;border-bottom:none;margin-top:5px;}
 </style>
 </head>
 <body>
@@ -457,6 +475,63 @@ body{padding-bottom:72px;}
     · 표에 없는 <strong style="color:#0047AB;">N시리즈·55형 등 추가 구성</strong>도 운영 중입니다. 매장 환경·예산에 맞춰 최적 구성을 제안해 드립니다.<br>
     · 부가세 포함 여부 및 설치비는 구성에 따라 달라질 수 있으니 담당자에게 확인해 주세요.
   </p>
+</div>
+
+<hr class="sep">
+
+<div class="section">
+  <div class="section-kicker">Best Fit</div>
+  <h2 class="section-heading">현장별<br><span>맞춤 추천 구성</span></h2>
+  <div class="usecase">
+
+    <!-- 학원 특화 -->
+    <div class="uc-card edu">
+      <div class="uc-head">
+        <div>
+          <div class="uc-tag">학원 특화</div>
+          <div class="uc-model">MX75 + 전동스탠드</div>
+        </div>
+        <div class="uc-pill">강사 One Pick</div>
+      </div>
+      <div class="uc-body">
+        <div class="uc-li"><span class="uc-dot"></span><div><strong>스타강사·인강 선생님이 가장 먼저 찾는 모델</strong></div></div>
+        <div class="uc-li"><span class="uc-dot"></span><div>전국 학원에서 <strong>가장 많이 사용하는 사이즈</strong></div></div>
+        <div class="uc-li size"><span class="uc-dot"></span><div>과목별 추천 — <strong>국어·영어 65"~75"</strong> / <strong>수학·과학 75"~98"</strong> (넓은 판서 공간이 필요한 과목)</div></div>
+      </div>
+    </div>
+
+    <!-- 기업 특화 -->
+    <div class="uc-card biz">
+      <div class="uc-head">
+        <div>
+          <div class="uc-tag">기업 특화</div>
+          <div class="uc-model">IX65 · 대표 모델</div>
+        </div>
+        <div class="uc-pill">화상회의 최적</div>
+      </div>
+      <div class="uc-body">
+        <div class="uc-li"><span class="uc-dot"></span><div><strong>화상회의에 최적</strong> — 선명한 고화질로 회의실 분위기를 바꿉니다</div></div>
+        <div class="uc-li"><span class="uc-dot"></span><div><strong>AI 기능 탑재</strong> — 실시간 번역(일상 대화 번역 수준, 비즈니스 용어집 미제공) · 회의록 자막 · 요약</div></div>
+        <div class="uc-li"><span class="uc-dot"></span><div>미디어월 · LED 사이니지도 <strong>문의 가능</strong></div></div>
+      </div>
+    </div>
+
+    <!-- 학교 특화 -->
+    <div class="uc-card school">
+      <div class="uc-head">
+        <div>
+          <div class="uc-tag">학교 특화</div>
+          <div class="uc-model">MX86</div>
+        </div>
+        <div class="uc-pill">교실 표준</div>
+      </div>
+      <div class="uc-body">
+        <div class="uc-li"><span class="uc-dot"></span><div>넓은 교실 <strong>어느 자리에서나 또렷하게</strong> 보이는 86형 대화면</div></div>
+        <div class="uc-li"><span class="uc-dot"></span><div>전국 학교 <strong>2곳 중 1곳</strong>이 사용하는 검증된 구성</div></div>
+      </div>
+    </div>
+
+  </div>
 </div>
 
 <hr class="sep">
