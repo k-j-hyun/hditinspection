@@ -104,6 +104,16 @@ body{padding-bottom:72px;}
 .promo-banner{background:linear-gradient(135deg,#FF4D4D 0%,#FF7A59 100%);border-radius:12px;padding:14px 16px;margin-bottom:14px;color:#fff;}
 .promo-banner .ptag{font-size:11px;font-weight:800;letter-spacing:1px;margin-bottom:6px;}
 .promo-banner .pline{font-size:12.5px;font-weight:700;line-height:1.75;}
+/* LOWEST-PRICE HOOK CARD */
+.price-hook{background:linear-gradient(135deg,#13294B 0%,#0a0a0a 100%);border-radius:16px;padding:20px 20px 18px;margin-bottom:18px;position:relative;overflow:hidden;}
+.price-hook::after{content:"TAB PRIME";position:absolute;right:-6px;bottom:-14px;font-size:46px;font-weight:900;color:rgba(255,255,255,0.05);letter-spacing:-1px;white-space:nowrap;}
+.hook-badge{display:inline-block;background:#FFD600;color:#0a0a0a;font-size:10.5px;font-weight:900;padding:4px 10px;border-radius:20px;letter-spacing:0.5px;margin-bottom:10px;}
+.hook-title{color:#fff;font-size:13.5px;font-weight:700;opacity:0.9;margin-bottom:4px;}
+.hook-price{color:#fff;font-size:15px;font-weight:700;line-height:1.3;}
+.hook-price strong{color:#FFD600;font-size:30px;font-weight:900;letter-spacing:-0.5px;}
+.hook-sub{display:inline-block;font-size:11.5px;color:#b9c3d6;font-weight:600;margin-left:4px;}
+.hook-note{font-size:11.5px;color:#cfd6e3;margin-top:8px;font-weight:600;line-height:1.6;}
+.hook-cta{display:inline-flex;align-items:center;gap:6px;margin-top:12px;background:#FFD600;color:#0a0a0a;font-size:12.5px;font-weight:800;padding:10px 18px;border-radius:50px;text-decoration:none;}
 .promo-banner .pline s{opacity:0.65;font-weight:500;}
 .promo-banner .pline b{color:#FFD600;}
 /* COMPACT TABLE */
@@ -246,7 +256,7 @@ body{padding-bottom:72px;}
     <div class="spec-card"><strong>MX86"</strong><span>1959×1180mm · 63kg<br>일시불 535만원</span></div>
     <div class="spec-card"><strong>MX98"</strong><span>최대 사이즈<br>일시불 999만원</span></div>
     <div class="spec-card"><strong>IX 시리즈</strong><span>65"~98" 프리미엄<br>IX86 일시불 680만원</span></div>
-    <div class="spec-card" style="border-color:#FFD600;background:linear-gradient(135deg,#F5F7FF,#fff);"><strong>TAB PRIME</strong><span><span class="hot-badge" style="margin-bottom:3px;display:inline-block;">NEW 26.10</span><br>55"~65" · Android 16<br>일시불 195만원부터</span></div>
+    <div class="spec-card" style="border-color:#FFD600;background:linear-gradient(135deg,#F5F7FF,#fff);order:-1;"><strong>TAB PRIME</strong><span><span class="hot-badge" style="margin-bottom:3px;display:inline-block;">NEW · 최다문의</span><br>55"~65" · Android 16<br>일시불 195만원부터</span></div>
     <div class="spec-card" style="border-color:#FFD600;background:linear-gradient(135deg,#F5F7FF,#fff);"><strong>AX135</strong><span><span class="hot-badge" style="margin-bottom:3px;display:inline-block;">NEW 26.10</span><br>3000×1687.5mm COB LED · Android 16<br>초대형 올인원 · 일시불 3,750만원</span></div>
   </div>
 </div>
@@ -258,6 +268,14 @@ body{padding-bottom:72px;}
   <div class="section-kicker">Pricing</div>
   <h2 class="section-heading">한눈에 보는 <span>가격 안내</span></h2>
 
+  <div class="price-hook">
+    <div class="hook-badge">전 라인업 최저가</div>
+    <div class="hook-title">TAB PRIME 65" 벽걸이형 (Android 16)</div>
+    <div class="hook-price">월 <strong>53,000원</strong><span class="hook-sub">부터 (36개월 · 선납 100만원 기준)</span></div>
+    <div class="hook-note">24개월 70,000원/월 · 일시불 259만원 · 전자칠판 처음 도입하는 학원·소규모 매장에 가장 많이 추천하는 구성입니다</div>
+    <a href="tel:010-4747-4644" class="hook-cta">📞 이 가격으로 상담하기</a>
+  </div>
+
   <div class="mode-toggle">
     <button class="mode-btn active" data-mode="prepay">선납 렌탈<span class="as">무상 A/S 3년</span></button>
     <button class="mode-btn" data-mode="normal">일반 렌탈<span class="as">무상 A/S 3년</span></button>
@@ -266,10 +284,16 @@ body{padding-bottom:72px;}
 
   <!-- ===== 선납 렌탈 ===== -->
   <div class="mode-pane active" id="mode-prepay">
-    <p class="pane-intro">선납금을 먼저 납부해 <strong>월 납입료를 가장 낮게</strong> 가져가는 방식입니다. 가격은 모두 <strong>전동스탠드 포함</strong> 기준 (MX55는 선반스탠드 기준).</p>
+    <div class="promo-banner">
+      <div class="ptag">🔥 2026년 10월 신제품 · 학원 저가형 베스트</div>
+      <div class="pline">TAB PRIME 55"/65" — <b>Android 16</b> 탑재, 가장 많은 상담 문의를 받고 있는 가성비 1위 모델입니다</div>
+    </div>
+    <p class="pane-intro">선납금을 먼저 납부해 <strong>월 납입료를 가장 낮게</strong> 가져가는 방식입니다. 가격은 모두 <strong>전동스탠드 포함</strong> 기준 (MX55·TAB PRIME은 선반스탠드 기준).</p>
   <div class="tabs-wrap">
     <div class="tabs">
-      <button class="tab-btn active" data-target="mx55">MX55</button>
+      <button class="tab-btn active" data-target="tabprime55">TAB PRIME 55</button>
+      <button class="tab-btn" data-target="tabprime65">TAB PRIME 65</button>
+      <button class="tab-btn" data-target="mx55">MX55</button>
       <button class="tab-btn" data-target="mx65">MX65</button>
       <button class="tab-btn" data-target="mx75">MX75</button>
       <button class="tab-btn" data-target="mx86">MX86</button>
@@ -279,14 +303,34 @@ body{padding-bottom:72px;}
       <button class="tab-btn" data-target="ix75">IX75</button>
       <button class="tab-btn" data-target="ix86">IX86</button>
       <button class="tab-btn" data-target="ix98">IX98</button>
-      <button class="tab-btn" data-target="tabprime55">TAB PRIME 55</button>
-      <button class="tab-btn" data-target="tabprime65">TAB PRIME 65</button>
       <button class="tab-btn" data-target="ax135">AX135</button>
     </div>
   </div>
 
+  <!-- TAB PRIME 55 전동스탠드 포함, 선납 50만 -->
+  <div class="tab-content active" id="tab-tabprime55">
+    <div class="price-box">
+      <div class="price-head"><h3>TAB PRIME 55 + 전동스탠드 <span class="hot-badge">NEW · 최다문의</span></h3><div class="price-badge">선납금 50만원</div></div>
+      <div class="prepay-row"><span class="prepay-label">2026년 10월 신제품 · Android 16 · 학원 저가형 베스트</span></div>
+      <div class="price-row"><span class="period">24개월</span><span class="monthly">105,000원/월</span><span class="total">총 3,020,000원</span></div>
+      <div class="price-row"><span class="period">36개월</span><span class="monthly">70,000원/월</span><span class="total">총 3,020,000원</span></div>
+    </div>
+    <p class="price-note">※ 선반스탠드: 24개월 80,000원/월 · 36개월 60,000원/월<br>※ 벽걸이형만: 선납 50만원 기준 24개월 63,000원/월 · 36개월 47,000원/월 | 일시불 195만원</p>
+  </div>
+
+  <!-- TAB PRIME 65 전동스탠드 포함, 선납 100만 -->
+  <div class="tab-content" id="tab-tabprime65">
+    <div class="price-box">
+      <div class="price-head"><h3>TAB PRIME 65 + 전동스탠드 <span class="hot-badge">NEW · 최다문의</span></h3><div class="price-badge">선납금 100만원</div></div>
+      <div class="prepay-row"><span class="prepay-label">2026년 10월 신제품 · Android 16 · 학원 저가형 베스트</span></div>
+      <div class="price-row"><span class="period">24개월</span><span class="monthly">102,000원/월</span><span class="total">총 3,448,000원</span></div>
+      <div class="price-row"><span class="period">36개월</span><span class="monthly">77,000원/월</span><span class="total">총 3,772,000원</span></div>
+    </div>
+    <p class="price-note">※ 선반스탠드: 24개월 88,000원/월 · 36개월 67,000원/월<br>※ 벽걸이형만: 선납 100만원 기준 24개월 70,000원/월 · 36개월 53,000원/월 | 일시불 259만원</p>
+  </div>
+
   <!-- MX55 선반스탠드 포함, 선납 50만 -->
-  <div class="tab-content active" id="tab-mx55">
+  <div class="tab-content" id="tab-mx55">
     <div class="price-box">
       <div class="price-head"><h3>MX55 + 선반스탠드</h3><div class="price-badge">선납금 50만원</div></div>
       <div class="prepay-row"><span class="prepay-label">선반스탠드 포함</span></div>
@@ -395,28 +439,6 @@ body{padding-bottom:72px;}
     <p class="price-note">※ 벽걸이형만: 선납 100만원 기준 24개월 94,000원/월부터 | 일시불 310만원</p>
   </div>
 
-  <!-- TAB PRIME 55 전동스탠드 포함, 선납 50만 -->
-  <div class="tab-content" id="tab-tabprime55">
-    <div class="price-box">
-      <div class="price-head"><h3>TAB PRIME 55 + 전동스탠드 <span class="hot-badge">NEW</span></h3><div class="price-badge">선납금 50만원</div></div>
-      <div class="prepay-row"><span class="prepay-label">2026년 10월 신제품 · Android 16 · 학원 저가형</span></div>
-      <div class="price-row"><span class="period">24개월</span><span class="monthly">105,000원/월</span><span class="total">총 3,020,000원</span></div>
-      <div class="price-row"><span class="period">36개월</span><span class="monthly">70,000원/월</span><span class="total">총 3,020,000원</span></div>
-    </div>
-    <p class="price-note">※ 선반스탠드: 24개월 80,000원/월 · 36개월 60,000원/월<br>※ 벽걸이형만: 선납 50만원 기준 24개월 63,000원/월 · 36개월 47,000원/월 | 일시불 195만원</p>
-  </div>
-
-  <!-- TAB PRIME 65 전동스탠드 포함, 선납 100만 -->
-  <div class="tab-content" id="tab-tabprime65">
-    <div class="price-box">
-      <div class="price-head"><h3>TAB PRIME 65 + 전동스탠드 <span class="hot-badge">NEW</span></h3><div class="price-badge">선납금 100만원</div></div>
-      <div class="prepay-row"><span class="prepay-label">2026년 10월 신제품 · Android 16 · 학원 저가형</span></div>
-      <div class="price-row"><span class="period">24개월</span><span class="monthly">102,000원/월</span><span class="total">총 3,448,000원</span></div>
-      <div class="price-row"><span class="period">36개월</span><span class="monthly">77,000원/월</span><span class="total">총 3,772,000원</span></div>
-    </div>
-    <p class="price-note">※ 선반스탠드: 24개월 88,000원/월 · 36개월 67,000원/월<br>※ 벽걸이형만: 선납 100만원 기준 24개월 70,000원/월 · 36개월 53,000원/월 | 일시불 259만원</p>
-  </div>
-
   <!-- AX135 선납렌탈 (12개월 전용) -->
   <div class="tab-content" id="tab-ax135">
     <div class="price-box">
@@ -435,6 +457,9 @@ body{padding-bottom:72px;}
       <table class="ptable">
         <thead><tr><th>모델 (전동스탠드)</th><th>12개월<span class="u">월</span></th><th>24개월<span class="u">월</span></th><th>36개월<span class="u">월</span></th></tr></thead>
         <tbody>
+          <tr class="grp"><td colspan="4">TAB PRIME (학원 저가형 베스트) <span class="hot-badge" style="margin-left:4px;">NEW · 최다문의</span></td></tr>
+          <tr><td class="m">TAB PRIME 55</td><td>252,000</td><td>138,000</td><td>101,000</td></tr>
+          <tr><td class="m">TAB PRIME 65</td><td>311,000</td><td>171,000</td><td>125,000</td></tr>
           <tr class="grp"><td colspan="4">MX 시리즈</td></tr>
           <tr><td class="m">MX55</td><td>284,000</td><td>156,000</td><td>114,000</td></tr>
           <tr><td class="m">MX65</td><td>436,000</td><td>239,000</td><td>175,000</td></tr>
@@ -449,9 +474,6 @@ body{padding-bottom:72px;}
           <tr><td class="m">IX75</td><td>616,000</td><td>339,000</td><td>248,000</td></tr>
           <tr><td class="m">IX86</td><td>700,000</td><td>384,000</td><td>281,000</td></tr>
           <tr><td class="m">IX98</td><td>1,181,000</td><td>649,000</td><td>475,000</td></tr>
-          <tr class="grp"><td colspan="4">TAB PRIME (학원 저가형) <span class="hot-badge" style="margin-left:4px;">NEW</span></td></tr>
-          <tr><td class="m">TAB PRIME 55</td><td>252,000</td><td>138,000</td><td>101,000</td></tr>
-          <tr><td class="m">TAB PRIME 65</td><td>311,000</td><td>171,000</td><td>125,000</td></tr>
         </tbody>
       </table>
     </div>
@@ -465,6 +487,9 @@ body{padding-bottom:72px;}
       <table class="ptable">
         <thead><tr><th>모델</th><th>일시불 가격<span class="u">벽걸이 기준 (원)</span></th></tr></thead>
         <tbody>
+          <tr class="grp"><td colspan="2">학원 저가형 베스트 TAB PRIME <span class="hot-badge" style="margin-left:4px;">NEW · 최다문의</span></td></tr>
+          <tr class="big"><td class="m">TAB PRIME 55"<small>Android 16</small></td><td>1,950,000</td></tr>
+          <tr class="big"><td class="m">TAB PRIME 65"<small>Android 16</small></td><td>2,590,000</td></tr>
           <tr class="grp"><td colspan="2">IX 시리즈 (프리미엄)</td></tr>
           <tr class="big"><td class="m">IX98</td><td>12,000,000</td></tr>
           <tr class="big"><td class="m">IX86</td><td>6,800,000</td></tr>
@@ -479,9 +504,6 @@ body{padding-bottom:72px;}
           <tr class="big"><td class="m">MX55</td><td>2,300,000</td></tr>
           <tr class="grp"><td colspan="2">알파 시리즈</td></tr>
           <tr class="big"><td class="m">알파 3.0 86</td><td>3,100,000</td></tr>
-          <tr class="grp"><td colspan="2">학원 저가형 TAB PRIME <span class="hot-badge" style="margin-left:4px;">NEW 26.10</span></td></tr>
-          <tr class="big"><td class="m">TAB PRIME 65"<small>Android 16</small></td><td>2,590,000</td></tr>
-          <tr class="big"><td class="m">TAB PRIME 55"<small>Android 16</small></td><td>1,950,000</td></tr>
           <tr class="grp"><td colspan="2">프리미엄 초대형 COB LED <span class="hot-badge" style="margin-left:4px;">NEW 26.10</span></td></tr>
           <tr class="big"><td class="m">AX135<small>3000×1687.5mm · 141kg · Android 16</small></td><td>37,500,000</td></tr>
         </tbody>
